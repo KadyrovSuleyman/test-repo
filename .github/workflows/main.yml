@@ -38,10 +38,10 @@ jobs:
         run: sudo apt install -y valgrind
 
       - name: Valgring test
-        working-directory: ${{github.workspace}}/project
+        working-directory: ${{github.workspace}}
         shell: bash
         run: |
-          valgrind ./main 
+          valgrind ./project/main 
           3 3
           1 2 3
           4 5 6
