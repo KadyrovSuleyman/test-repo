@@ -8,3 +8,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -std=c++0x -Wall -Werror -Wextra -ggdb3 ")
 add_subdirectory(project)
 
 enable_testing()
+
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
