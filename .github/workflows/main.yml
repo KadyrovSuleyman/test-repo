@@ -37,3 +37,6 @@ jobs:
 
       - name: asdfassdf
         run: echo sdfsdf
+
+      - name: start
+        run: ./linters/run.sh
