@@ -48,7 +48,7 @@ jobs:
 
         shell: bash
         working-directory: ${{github.workspace}}/build
-        run: make && cd project && cd tests && ls
+        run: make && cd project && cd tests && ls && ./mytest
 
       # - name: Valgring test1
       #   working-directory: ${{github.workspace}}/build/project/
