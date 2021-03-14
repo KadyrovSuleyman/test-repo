@@ -14,3 +14,5 @@ enable_testing()
 
 include_directories(gtest)
 target_link_libraries(mytest gtest -lpthread)
+
+add_subdirectory(googletest)
