@@ -14,6 +14,8 @@ int main() {
 
     // FILE* result_file = fopen("result", "w+");
 
+    fprintf(stdout, "%s\n", "sdfsd");
+
     print_matrix(target, stdout);
 
     // size_t minor_row = read_data(stdin);
