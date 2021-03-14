@@ -14,6 +14,8 @@ int main() {
 
     // FILE* result_file = fopen("result", "w+");
 
+    print_matrix(target);
+
     size_t minor_row = read_data(stdin);
     size_t minor_col = read_data(stdin);
 
