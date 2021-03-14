@@ -49,5 +49,4 @@ jobs:
         shell: bash
         working-directory: ${{github.workspace}}
         run: |
-          ./project
-          ls
+          ./project && ls
