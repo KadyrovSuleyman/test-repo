@@ -26,7 +26,7 @@ int main() {
     if (is_matrix_equal(target, result)) {
         fprintf(stderr, "%s\n", "Error");
     }
-    
+
     free_matrix(result);
     free_matrix(target);
     return 0;
