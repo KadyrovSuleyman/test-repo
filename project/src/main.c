@@ -22,7 +22,7 @@ int main() {
 
     if (print_matrix(result, stdout)) {
         fprintf(stderr, "%s\n", "Error");
-    } 
+    }
     if (is_matrix_equal(target, result)) {
         fprintf(stderr, "%s\n", "Error");
     }
