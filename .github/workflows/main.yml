@@ -18,8 +18,8 @@ jobs:
       - name: Static code analysis
         run: ./linters/run.sh
 
-      - name: Project building
-        run: |
+      # - name: Project building
+      #   run: |
           # apt-get install --yes libgtest-dev
           # cmake . 
 
