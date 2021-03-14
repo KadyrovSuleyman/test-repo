@@ -44,7 +44,7 @@ jobs:
 
         shell: bash
         working-directory: ${{github.workspace}}/build
-        run: make && cd project && ls && main &&
+        run: make && cd project && ls && ./main &&
           3 3
           1 2 3
           4 5 6
