@@ -15,8 +15,6 @@ target_link_libraries(mytest matrix)
 enable_testing()
 
 
-message(${GTEST_LIBRARIES})
-
 target_link_libraries(mytest ${GTEST_LIBRARIES} -lpthread)
 target_link_libraries(mytest matrix)
 
