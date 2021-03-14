@@ -11,3 +11,6 @@ enable_testing()
 
 #find_package(GTest REQUIRED)
 #include_directories(${GTEST_INCLUDE_DIRS})
+
+include_directories(gtest)
+target_link_libraries(mytest gtest -lpthread)
