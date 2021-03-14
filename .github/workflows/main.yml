@@ -20,5 +20,5 @@ jobs:
 
       - name: Project building
         run: |
-          echo sdfsdf
+          apt-get install --yes libgtest-dev
           cmake . 
