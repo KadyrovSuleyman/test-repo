@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Static code analysis
+        shell: bash
         run: ./linters/run.sh
 
       - name: Create Build Environment
@@ -30,3 +31,9 @@ jobs:
         working-directory: ${{github.workspace}}/build
         shell: bash
         run: cmake --build . --config $BUILD_TYPE
+
+      # - name: Valgring test
+      #   working-directory: ${{github.workspace}}/build
+      #   shell: bash
+      #   run: |
+          
