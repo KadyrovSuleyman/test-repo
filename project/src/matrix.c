@@ -43,11 +43,9 @@ int print_matrix(const Matrix* target, FILE* os) {
 
 Matrix* malloc_matrix(const size_t rows, const size_t cols) {
     Matrix* result = (Matrix*)malloc(sizeof(Matrix));
-
     if (errno == ENOTTY) {
         errno = 0;
     }
-
     if (unlikely(error_handler("malloc"))) {
         free_matrix(result);
         return NULL;
@@ -56,22 +54,28 @@ Matrix* malloc_matrix(const size_t rows, const size_t cols) {
     result->cols = cols;
 
     result->item = (double**)malloc(rows * sizeof(double*));
-    // if (unlikely(error_handler("malloc"))) {
-    //     free(result->item);
-    //     free_matrix(result);
-    //     return NULL;
-    // }
+    if (errno == ENOTTY) {
+        errno = 0;
+    }
+    if (unlikely(error_handler("malloc"))) {
+        free(result->item);
+        free_matrix(result);
+        return NULL;
+    }
 
     for (size_t i = 0; i < rows; ++i) {
         result->item[i] = (double*)malloc(cols * sizeof(double));
-        // if (unlikely(error_handler("malloc"))) {
-        //     for (size_t j = 0; j < i; ++j) {
-        //         free(result->item[j]);
-        //     }
-        //     free(result->item);
-        //     free_matrix(result);
-        //     return NULL;
-        // }
+        if (errno == ENOTTY) {
+            errno = 0;
+        }
+        if (unlikely(error_handler("malloc"))) {
+            for (size_t j = 0; j < i; ++j) {
+                free(result->item[j]);
+            }
+            free(result->item);
+            free_matrix(result);
+            return NULL;
+        }
     }
 
     return result;
