@@ -66,7 +66,7 @@ Matrix* malloc_matrix(const size_t rows, const size_t cols) {
         //     free(result->item);
         //     free_matrix(result);
         //     return NULL;
-        }
+        // }
     }
 
     return result;
