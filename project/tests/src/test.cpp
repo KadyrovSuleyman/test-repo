@@ -18,7 +18,7 @@ extern "C" {
 
 TEST(create_matrix, case_1) {
 
-    FILE* l = fopen("./project/tests/data/case_1/left", "r");
+    FILE* l = fopen(".project/tests/data/case_1/left", "r");
     // FILE* r = fopen("project/tests/data/case_1/right", "r");
 
     // Matrix* left = create_matrix(l);
