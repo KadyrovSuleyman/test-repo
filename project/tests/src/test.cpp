@@ -29,7 +29,7 @@ TEST(create_matrix, case_1) {
     // free_matrix(left);
     // free_matrix(right);
 
-    // fclose(l);
+    fclose(l);
     // fclose(r);
 }
 
