@@ -13,9 +13,7 @@ extern "C" {
 
 TEST(first_test, malloc_matrix) {
     Matrix* t = malloc_matrix(1, 1);
-    
     t->item[0][0] = 5;
-    fprintf(stdout, "%lf\n", t->item[0][0]);
     ASSERT_EQ(t->item[0][0], 5);
     free_matrix(t);
 }
