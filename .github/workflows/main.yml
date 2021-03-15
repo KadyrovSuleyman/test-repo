@@ -32,10 +32,10 @@ jobs:
         shell: bash
         run: cmake --build . --config $BUILD_TYPE
 
-      # - name: Valgring install
-      #   working-directory: ${{github.workspace}}
-      #   shell: bash
-      #   run: sudo apt install -y valgrind
+      - name: Valgring install
+        working-directory: ${{github.workspace}}
+        shell: bash
+        run: sudo apt install -y valgrind
 
       # - name: Valgring check
       #   shell: bash
