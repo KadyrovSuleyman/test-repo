@@ -16,7 +16,7 @@ TEST(first_test, malloc_matrix) {
     
     t->item[0][0] = 5;
     fprintf(stdout, "%lf\n", t->item[0][0]);
-    // ASSERT_EQ(t->rows, 1);
+    ASSERT_EQ(t->item[0][0], 5);
     free_matrix(t);
 }
 
