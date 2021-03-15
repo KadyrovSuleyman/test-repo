@@ -43,19 +43,19 @@ int print_matrix(const Matrix* target, FILE* os) {
 
 Matrix* malloc_matrix(const size_t rows, const size_t cols) {
     Matrix* result = malloc(sizeof(Matrix));
-    // if (unlikely(error_handler("malloc"))) {
-    //     free_matrix(result);
-    //     return NULL;
-    // }
+    if (unlikely(error_handler("malloc"))) {
+        free_matrix(result);
+        return NULL;
+    }
     result->rows = rows;
     result->cols = cols;
 
     result->item = (double**)malloc(rows * sizeof(double*));
-    // if (unlikely(error_handler("malloc"))) {
-    //     free(result->item);
-    //     free_matrix(result);
-    //     return NULL;
-    // }
+    if (unlikely(error_handler("malloc"))) {
+        free(result->item);
+        free_matrix(result);
+        return NULL;
+    }
 
     for (size_t i = 0; i < rows; ++i) {
         result->item[i] = (double*)malloc(cols * sizeof(double));
@@ -63,9 +63,9 @@ Matrix* malloc_matrix(const size_t rows, const size_t cols) {
             for (size_t j = 0; j < i; ++j) {
                 free(result->item[j]);
             }
-            // free(result->item);
-            // free_matrix(result);
-            // return NULL;
+            free(result->item);
+            free_matrix(result);
+            return NULL;
         }
     }
 
