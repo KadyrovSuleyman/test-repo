@@ -25,21 +25,21 @@ int main() {
 
     print_matrix(target, stdout);
 
-    // size_t minor_row = read_data(stdin);
-    // size_t minor_col = read_data(stdin);
+    size_t minor_row = read_data(stdin);
+    size_t minor_col = read_data(stdin);
 
-    // Matrix* result;
-    // result = minor_matrix(target, target->rows, target->cols, minor_row, minor_col);
+    Matrix* result;
+    result = minor_matrix(target, target->rows, target->cols, minor_row, minor_col);
 
-    // if (print_matrix(result, stdout)) {
-    //     fprintf(stderr, "%s\n", "Error");
-    // }
-    // if (is_matrix_equal(target, result)) {
-    //     fprintf(stderr, "%s\n", "Error");
-    // }
+    if (print_matrix(result, stdout)) {
+        fprintf(stderr, "%s\n", "Error");
+    }
+    if (is_matrix_equal(target, result)) {
+        fprintf(stderr, "%s\n", "Error");
+    }
 
-    // free_matrix(result);
-    // free_matrix(target);
+    free_matrix(result);
+    free_matrix(target);
 //-----------------------------------
 
 
