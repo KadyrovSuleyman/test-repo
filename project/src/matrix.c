@@ -43,9 +43,9 @@ int print_matrix(const Matrix* target, FILE* os) {
 
 Matrix* malloc_matrix(const size_t rows, const size_t cols) {
     Matrix* result = (Matrix*)malloc(sizeof(Matrix));
-    if (errno == ENOTTY) {
-        errno = 0;
-    }
+    // if (errno == ENOTTY) {
+    //     errno = 0;
+    // }
     if (unlikely(error_handler("malloc"))) {
         free_matrix(result);
         return NULL;
