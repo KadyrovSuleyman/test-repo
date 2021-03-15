@@ -1,7 +1,6 @@
 #include "matrix.h"
 
 int main() {
-
     Matrix* target;
     target = create_matrix(stdin);
 
