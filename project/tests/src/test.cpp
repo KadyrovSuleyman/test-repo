@@ -31,8 +31,8 @@ TEST(create_matrix, case_1) {
     // free_matrix(left);
     // free_matrix(right);
 
-    // fclose(l);
-    fclose(r);
+    fclose(l);
+    // fclose(r);
 }
 
 int main(int argc, char** argv) {
