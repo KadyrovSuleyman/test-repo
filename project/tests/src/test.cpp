@@ -1,13 +1,13 @@
 #include "gtest/gtest.h"
 #include <iostream>
+#include <errno.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 extern "C" {
     #include "matrix.h"
-    #include <errno.h>
-    #include <stdlib.h>
-    #include <stdio.h>
-    #include <ctype.h>
-    #include <string.h>
 }
 
 TEST(first_test, malloc_matrix) {
