@@ -51,10 +51,11 @@ jobs:
       #   run: |
       #     valgrind --leak-check=full -s ./project/tests/mytest
 
-      # && ./project/tests/mytest
+      
+                # cd ../project/tests/data/case_1 && ls
 
       - name: Tests
         shell: bash
         working-directory: ${{github.workspace}}/build
         run: |
-          cd ../project/tests/data/case_1 && ls
+          ./project/tests/mytest
