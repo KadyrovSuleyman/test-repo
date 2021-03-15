@@ -43,6 +43,7 @@ int print_matrix(const Matrix* target, FILE* os) {
 
 Matrix* malloc_matrix(const size_t rows, const size_t cols) {
     Matrix* result = (Matrix*)malloc(sizeof(Matrix));
+    fprintf(stdout, "%d\n", errno);
     // if (unlikely(error_handler("malloc"))) {
     //     free_matrix(result);
     //     return NULL;
