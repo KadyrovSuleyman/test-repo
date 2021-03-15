@@ -1,15 +1,7 @@
 #include "matrix.h"
 
-// #include <errno.h>
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include <ctype.h>
-// #include <string.h>
-
 int main() {
 
-
-//--------------------------
     Matrix* target;
     target = create_matrix(stdin);
 
@@ -40,12 +32,6 @@ int main() {
 
     free_matrix(result);
     free_matrix(target);
-//-----------------------------------
-
-
-    // Matrix* result = malloc(sizeof(Matrix));
-    // fprintf(stdout, "%s\n", "dsfsd");
-
 
     return 0;
 }
