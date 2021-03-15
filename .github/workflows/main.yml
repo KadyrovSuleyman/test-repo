@@ -57,4 +57,4 @@ jobs:
         shell: bash
         working-directory: ${{github.workspace}}/build
         run: |
-          cd ../project/tests/data/case_1 
+          cd ../project/tests/data/case_1 && ls
