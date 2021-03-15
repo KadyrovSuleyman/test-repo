@@ -38,5 +38,9 @@ int main() {
 //-----------------------------------
 */
 
+    Matrix* result = malloc(sizeof(Matrix));
+    fprintf(stdour, "%s\n", "dsfsd");
+
+
     return 0;
 }
