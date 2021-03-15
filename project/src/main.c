@@ -1,9 +1,11 @@
 #include "matrix.h"
 
 int main() {
+
+/*
+//--------------------------
     Matrix* target;
     // target = create_matrix(stdin);
-    target = malloc_matrix(2, 2);
 
     // FILE* target_file = fopen("test", "r");
     // target = create_matrix(target_file);
@@ -33,5 +35,8 @@ int main() {
 
     // free_matrix(result);
     // free_matrix(target);
+//-----------------------------------
+*/
+
     return 0;
 }
