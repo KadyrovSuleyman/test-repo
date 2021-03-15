@@ -10,15 +10,16 @@ extern "C" {
     #include "matrix.h"
 }
 
-// TEST(first_test, malloc_matrix) {
-//     Matrix* t = malloc_matrix(1, 1);
-//     ASSERT_EQ(t->rows, 1);
-//     free_matrix(t);
-// }
+TEST(first_test, malloc_matrix) {
+    Matrix* t = malloc_matrix(1, 1);
+    t->item[0][0] = 5;
+    ASSERT_EQ(t->rows, 1);
+    free_matrix(t);
+}
 
-TEST(create_matrix, case_1) {
+// TEST(create_matrix, case_1) {
 
-    FILE* l = fopen(".project/tests/data/case_1/left", "r");
+    // FILE* l = fopen(".project/tests/data/case_1/left", "r");
     // FILE* r = fopen("project/tests/data/case_1/right", "r");
 
     // Matrix* left = create_matrix(l);
@@ -29,9 +30,9 @@ TEST(create_matrix, case_1) {
     // free_matrix(left);
     // free_matrix(right);
 
-    fclose(l);
+    // fclose(l);
     // fclose(r);
-}
+// }
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
