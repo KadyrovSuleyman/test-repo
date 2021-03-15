@@ -37,7 +37,7 @@ jobs:
       #   shell: bash
       #   run: sudo apt install -y valgrind
 
-      - name: Main programm check
+      - name: Valgring check
         shell: bash
         working-directory: ${{github.workspace}}/build
-        run: make && cd project && echo 1 1 2 | ./main
+        run: make && cd project && echo 1 1 2 | valgrind ./main
