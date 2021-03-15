@@ -8,6 +8,9 @@ include_directories(include)
 
 add_executable(mytest src/test.cpp)
 
+#add_library(matrix1 STATIC project/src/matrix.c)
+#target_link_libraries(mytest matrix1)
+
 target_link_libraries(mytest matrix)
 
 
