@@ -7,11 +7,11 @@
 // На выход функция должна возвращать указатель на результирующую структуру
 
 #include "matrix.h"
-#include <errno.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+// #include <errno.h>
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include <ctype.h>
+// #include <string.h>
 
 #define unlikely(x)     __builtin_expect((x), 0)
 
