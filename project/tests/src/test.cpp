@@ -37,11 +37,11 @@ TEST(is_matrix_equal, case_1) {
 
 TEST(minor_matrix, case_2) {
 
-    FILE* input = fopen("./project/tests/data/case_2/input", "r");
-    FILE* output = fopen("./project/tests/data/case_2/output", "r");
+    FILE* input_file = fopen("./project/tests/data/case_2/input", "r");
+    FILE* output_file = fopen("./project/tests/data/case_2/output", "r");
 
-    Matrix* input = create_matrix(l);
-    Matrix* output = create_matrix(r);
+    Matrix* input = create_matrix(input_file);
+    Matrix* output = create_matrix(output_file);
 
     Matrix* result = minor_matrix(input, input->rows, input->cols, 1, 1);
 
@@ -51,8 +51,8 @@ TEST(minor_matrix, case_2) {
     free_matrix(output);
     free_matrix(result);
 
-    fclose(l);
-    fclose(r);
+    fclose(input_file);
+    fclose(output_file);
 }
 
 
