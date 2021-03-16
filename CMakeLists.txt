@@ -22,9 +22,3 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 
 
 endif()
-
-setup_target_for_coverage_lcov(
-           NAME coverage
-           EXECUTABLE matrix
-           EXCLUDE "${PROJECT_SOURCE_DIR}/project/src/*" "coverage")
-
